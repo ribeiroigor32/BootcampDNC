@@ -7,15 +7,27 @@
     <title>Bootcamp DNC</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+        :root {
+            --azul-dnc: #0C70F2;
+            --preto-dnc: #303030;
+            --cinze-hover: #c9c9c9;
+            --fonte-padrão: 'Inter', sans-serif;
+
+
+
+        }
         body {
             margin: 0;
             padding: 0;
+            background: linear-gradient(180deg, rgba(12, 112, 242, 0.5) 19.91%, rgba(12, 112, 242, 0) 24.84%), #303030;
+            background-repeat: no-repeat;
+            border: 1px solid #BABABA;
         }
         #principal {
             width: 100%;
             height: 100px;
             border: 1px solid black;
-            background-color: #303030;
+            background-color: var(--preto-dnc);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -28,8 +40,8 @@
             color: white;
             text-decoration: none;
         }
-            #principal div a:hover {
-                color: #ccc;
+        #principal div a:hover {
+                color: var(--cinze-hover);
             }
         #menu {
             display: flex;
@@ -51,6 +63,86 @@
             box-shadow: 3px 2px 4px rgba(12, 112, 242, 0.25);
             cursor: pointer;
         }
+        section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+        header {
+            Color: white;
+            font-family: var(--fonte-padrão);
+        }
+        header h1 {
+            font-size: 80px;
+            font-weight: 800;
+            text-transform: uppercase;
+            font-weight: bolder;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        header h2 {
+            text-align: center;
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 100px;
+        }
+        header .invert {
+            background-color: black;
+            font-weight: bold;
+            padding: 5px;
+        }
+        form {
+            color: white;
+            font-family: var(--fonte-padrão);
+            font-size: 30px;
+            font-weight: 600;
+            width: 600px;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+            margin-bottom: 10px;            
+        }
+        form input {
+            border-radius: 10px;
+            border: 0px;
+            height: 30px;
+            font-size: 20px;
+            padding: 10px;
+            background-color: gba(255, 255, 255, 0.9);
+
+        }
+        form label {
+            margin: 10px 0px 10px 0px;
+        }
+        form input ::placeholder {
+            color: rgba(57, 57, 57, 0.5);;
+        }
+        .checkbox-itens label {
+            font-size: 25px;
+        }
+        .checkbox-itens {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        input[type="checkbox"]{
+            transform: scale(1.5);
+        }
+        input[type="submit"]{
+            background-color:  rgba(12, 112, 242, 0.9);
+            width: 100%;
+            height: 56px;
+            font-size: 32px;
+            color: white;
+            margin-top: 10px;
+            box-shadow: 0px 6px 4px rgba(12, 112, 242, 0.25);
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -62,6 +154,52 @@
         </div>
         <button>Login</button>
     </nav>
-    
+    <section>
+        <header>
+            <h1>Bootcamp dnc</h1>
+            <h2>Esse será um evento exclusivo para todos os alunos<br>
+                da <b>DNC</b>, que querem <spam class="invert">acelerar a carreira</spam> com uma <br>
+                semana intensiva de conteúdo de mercado entre<br>
+                 <SPAM class= "invert">BACK-END, FRONT-END & BANCO DE DADOS</SPAM></h2>
+        </header>
+        <form>
+            <div class="form-group">
+                <label>Nome:</label>
+                <input type="text" placeholder="insira seu nome aqui">
+
+            </div>
+            <div class="form-group">
+                <label>Sobrenome:</label>
+                <input type="text" placeholder="insira seu sobrenome aqui">
+
+            </div>
+            <div class="form-group">
+                <label>Área de Interesse:</label>
+                <div class="checkbox-itens">
+                    <input type="checkbox" value="front">
+                    <label>Front-End</label>
+                    <input type="checkbox" value="back">
+                    <label>Back-End</label>
+                    <input type="checkbox" value="bb">
+                    <label>Banco de Dados</label>                    
+                </div>                
+            </div>
+            <div class="form-group">
+                <label>E-mail:</label>
+                <input type="text" placeholder="insira seu e-mail aqui">
+
+            </div>
+            <div class="form-group">
+                <label>Telefone:</label>
+                <input type="text" placeholder="(99)99999-9999)">
+
+            </div>
+            <div class="form-group">
+                <label>Insira uma Frase Criativa aqui:</label>
+                <input type="text" placeholder="Qual frase criativa você gostaria de falar? :)">
+            </div>
+            <input type="submit" value="cadastrar"> 
+        </form>
+    </section>
 </body>
 </html>
